@@ -10,6 +10,7 @@ export class EmployeeComponent{
 
 	public employee:Employee;
 	public employees:Array<Employee>;
+	public work_external:boolean;
 
 	constructor(){
 		this.employee = new Employee(
@@ -17,16 +18,23 @@ export class EmployeeComponent{
 			22,
 			'Programador',
 			true);
+
 		this.employees = [
 			new Employee('Nikola Tesla', 60, 'Genius', false),
 			new Employee('Allan Poe', 47, 'Genius', false),
 			new Employee('Mileva', 75, 'Genius', true)
 		];
+
+		this.work_external = false;
 	}
 
 	ngOnInit(){
 		console.log(this.employees);
 
+	}
+
+	changeExternal(value){
+		this.work_external = value;
 	}
 
 
