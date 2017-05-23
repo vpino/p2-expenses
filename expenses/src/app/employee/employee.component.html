@@ -30,6 +30,8 @@
 
 </div>
 
+<hr/>
+
 <h3> List of workes </h3>
 
 <ul>
@@ -43,4 +45,40 @@
 			<li *ngIf="worker.hired == false"> He is not hired </li>
 		</ul>
 	</li>
+</ul>
+
+<hr/>
+
+
+
+<h3> Colours Switch </h3>
+
+<ul [ngSwitch]="colour">
+	<li *ngSwitchCase="'red'" 
+		[ngStyle]="{
+			'background': colour, 
+			'color': 'white',
+			'padding': '20px'
+		}"> 
+			it's red 
+	</li>
+
+	<li *ngSwitchCase="'green'" 
+		[ngStyle]="{
+			'background': colour, 
+			'color': 'white',
+			'padding': '20px'
+		}"> 
+			it's green 
+	</li>
+
+	<li *ngSwitchCase="'blue'" 
+		[ngStyle]="{
+			'background': colour, 
+			'color': 'white',
+			'padding': '20px'
+		}"> 
+			it's blue 
+	</li>
+
 </ul>
