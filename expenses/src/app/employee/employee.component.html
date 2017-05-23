@@ -6,8 +6,11 @@
 
 <pre 
 	[style.border]="colour_selected == 'red' ? '5px solid black' : '1px solid green'"
-	[class.fundBlue]="colour_selected == 'blue'"
-	>
+	[ngClass]="{
+		fundBlue: colour_selected == 'blue',
+		fundGreen: colour_selected == 'green'
+	}">
+	
 	<strong> Selected Colour: </strong>
 	{{colour_selected}}
 </pre>

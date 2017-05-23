@@ -1,3 +1,11 @@
 .fundBlue{
 	background: lightblue !important;
 }
+
+.fundGreen{
+	background: lightgreen !important;
+}
+
+.letterBig{
+	font-size: 40px;
+}
