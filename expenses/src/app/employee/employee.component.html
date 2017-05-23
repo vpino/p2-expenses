@@ -1,3 +1,30 @@
+<h3> Selector colour </h3>
+
+<button (click)="logColourSelected()"> show log </button>
+
+<input type="text" [(ngModel)]="colour_selected"/>
+
+<pre>
+	<strong> Selected Colour: </strong>
+	{{colour_selected}}
+</pre>
+
+<div [ngStyle]="{
+		'background': colour_selected, 
+		'width': '200px',
+		'height': '200px',
+		'float': 'right',
+		'margin-right': '59%'
+	}">
+</div>
+
+<div style="clear:both"> </div>
+	
+
+
+<br/><br/>
+<hr/>
+
 <strong> Employee Start </strong>
 
 <div *ngIf="work_external == true">
@@ -48,8 +75,6 @@
 </ul>
 
 <hr/>
-
-
 
 <h3> Colours Switch </h3>
 
