@@ -1,37 +1,74 @@
 <h1> Component Car </h1>
 
-<form #formCar="ngForm" (ngSubmit)="onSubmit()">
+<style type="text/css" media="screen">
+
+.list{
+	margin-left: 70px;
+}
+
+div{
+	float: left;
+}
+
+form{
+	width: 200px;
+}
+
+input[type="text"], span {
+	display: block,
+	width: 100%;
+}
 	
-	<p>
-		<label>
-			Name: <input type="text" name="name" #name="ngModel" [(ngModel)]="car.name" required >
-		</label>
+</style>
 
-		<span *ngIf="name.touched && !name.valid">
-			Field name no valid
-		</span>
-	</p>
+<div>
+
+	<form #formCar="ngForm" (ngSubmit)="onSubmit()">
+		
+		<p>
+			<label>
+				Name: <input type="text" name="name" #name="ngModel" [(ngModel)]="car.name" required >
+			</label>
+
+			<span *ngIf="name.touched && !name.valid">
+				Field name no valid
+			</span>
+		</p>
+		
+		<p>
+			<label>
+				Horse: <input type="text" name="horse" #horse="ngModel" [(ngModel)]="car.horse" required pattern="[0-9]+">
+			</label>
+
+			<span *ngIf="horse.touched && !horse.valid">
+				Field horse no valid
+			</span>
+		</p>
+
+		<p>
+			<label>
+				Colour: <input type="text" name="colour" #colour="ngModel" [(ngModel)]="car.colour" required pattern="[a-zA-Z#]+">
+			</label>
+
+			<span *ngIf="colour.touched && !colour.valid">
+				Field colour no valid
+			</span>
+		</p>
+
+		<input type="submit" value="Save" >
+
+	</form>
+
+</div>
+
+<div class="list">
+
+	<h4> Car list </h4>
+
+	<ul>
+		<li *ngFor="let car of cars; let i = index"> 
+			{{car.name}} - {{car.horse}} - {{car.colour}}
+		</li>
+	</ul>
 	
-	<p>
-		<label>
-			Horse: <input type="text" name="horse" #horse="ngModel" [(ngModel)]="car.horse" required pattern="[0-9]+">
-		</label>
-
-		<span *ngIf="horse.touched && !horse.valid">
-			Field horse no valid
-		</span>
-	</p>
-
-	<p>
-		<label>
-			Colour: <input type="text" name="colour" #colour="ngModel" [(ngModel)]="car.colour" required pattern="[a-zA-Z#]+">
-		</label>
-
-		<span *ngIf="colour.touched && !colour.valid">
-			Field colour no valid
-		</span>
-	</p>
-
-	<input type="submit" value="Save">
-
-</form>
+</div>
