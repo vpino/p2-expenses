@@ -6,18 +6,30 @@
 		<label>
 			Name: <input type="text" name="name" #name="ngModel" [(ngModel)]="car.name" required >
 		</label>
+
+		<span *ngIf="name.touched && !name.valid">
+			Field name no valid
+		</span>
 	</p>
 	
 	<p>
 		<label>
-			Horse: <input type="text" name="horse" #horse="ngModel" [(ngModel)]="car.horse" required>
+			Horse: <input type="text" name="horse" #horse="ngModel" [(ngModel)]="car.horse" required pattern="[0-9]+">
 		</label>
+
+		<span *ngIf="horse.touched && !horse.valid">
+			Field horse no valid
+		</span>
 	</p>
 
 	<p>
 		<label>
-			Colour: <input type="text" name="colour" #colour="ngModel" [(ngModel)]="car.colour" required>
+			Colour: <input type="text" name="colour" #colour="ngModel" [(ngModel)]="car.colour" required pattern="[a-zA-Z#]+">
 		</label>
+
+		<span *ngIf="colour.touched && !colour.valid">
+			Field colour no valid
+		</span>
 	</p>
 
 	<input type="submit" value="Save">
