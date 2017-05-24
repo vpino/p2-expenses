@@ -18,13 +18,22 @@ export class ContactComponent {
 
 	ngOnInit(){
 
-		this._route.params.forEach( (params:Params) => {
+		this.title = 'Ah vaina';
+
+		this._route.params.forEach( (params: Params) => {
 
 			this.param = params['page'];
 
 		});
 
+	}
 
+	redirect(){
+		this._router.navigate(['/contact', 'nosabe']);
+	}
+
+	redirectHome(){
+		this._router.navigate(['/home']);
 	}
 
 }

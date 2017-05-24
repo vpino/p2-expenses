@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 const appRoutes: Routes = [
 	{path:'', component: HomeComponent},
 	{path:'home', component: HomeComponent},
+	{path:'contact', component:ContactComponent},
 	{path:'contact/:page', component:ContactComponent},
 	{path:'employee', component: EmployeeComponent},
 	{path:'fruit', component:FruitComponent},

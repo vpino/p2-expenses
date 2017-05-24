@@ -3,3 +3,13 @@
 <div *ngIf="param">
 	Param URL: {{param}}	
 </div>
+
+<div *ngIf="!param">
+	<button (click)="redirect()">
+		Go to the page with params	
+	 </button>
+
+	 <button (click)="redirectHome()">
+		Go Home	
+	 </button>
+</div>
