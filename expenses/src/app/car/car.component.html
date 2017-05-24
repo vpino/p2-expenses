@@ -1,0 +1,25 @@
+<h1> Component Car </h1>
+
+<form #formCar="ngForm" (ngSubmit)="onSubmit()">
+	
+	<p>
+		<label>
+			Name: <input type="text" name="name" #name="ngModel" [(ngModel)]="car.name" required >
+		</label>
+	</p>
+	
+	<p>
+		<label>
+			Horse: <input type="text" name="horse" #horse="ngModel" [(ngModel)]="car.horse" required>
+		</label>
+	</p>
+
+	<p>
+		<label>
+			Colour: <input type="text" name="colour" #colour="ngModel" [(ngModel)]="car.colour" required>
+		</label>
+	</p>
+
+	<input type="submit" value="Save">
+
+</form>

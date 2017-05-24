@@ -10,6 +10,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ConverterPipe } from './pipes/converter.pipe';
+import { CarComponent } from './car/car.component';
 
 @NgModule({
   
@@ -19,7 +20,8 @@ import { ConverterPipe } from './pipes/converter.pipe';
     EmployeeComponent,
     HomeComponent,
     ContactComponent,
-    ConverterPipe
+    ConverterPipe,
+    CarComponent
   ],
 
   imports: [
