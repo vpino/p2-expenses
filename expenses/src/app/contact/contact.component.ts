@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
     selector: 'contact',
@@ -8,9 +9,22 @@ import { Component } from '@angular/core';
 export class ContactComponent {
 
 	public title:string;
+	public param:Params;
 
-	constructor() {
-		this.title = 'Page Contact';
+	constructor(
+		private _route:ActivatedRoute,
+		private _router:Router
+	) {}
+
+	ngOnInit(){
+
+		this._route.params.forEach( (params:Params) => {
+
+			this.param = params['page'];
+
+		});
+
+
 	}
 
 }
