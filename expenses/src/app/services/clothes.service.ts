@@ -18,7 +18,8 @@ export class ClothesService{
 	}	
 
 	deleteGarment(index:number){
-		this.collection.slice(1, 1);
+		
+		this.collection.splice(index, 1);
 
 		return this.getClothes();
 	}

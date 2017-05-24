@@ -1,6 +1,11 @@
 <h2> {{ title }} </h2>
 <br/>
 
+{{date | date:'dd-MM-yyyy' }}
+{{date | date:'fullDate' }}
+
+<br/>
+
 <input type="text" [(ngModel)]="garment_save">
 
 <button (click)="saveGarment()"> Add Garment</button>
