@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ClothesService } from '../services/clothes.service';
 
-
 @Component({
     selector: 'home',
     templateUrl: './home.component.html',
