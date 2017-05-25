@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ConverterPipe } from './pipes/converter.pipe';
 import { CarComponent } from './car/car.component';
+import { TemplatesComponent } from './templates/templates.component';
 
 @NgModule({
   
@@ -21,7 +22,8 @@ import { CarComponent } from './car/car.component';
     HomeComponent,
     ContactComponent,
     ConverterPipe,
-    CarComponent
+    CarComponent,
+    TemplatesComponent
   ],
 
   imports: [
