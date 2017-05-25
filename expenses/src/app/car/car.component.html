@@ -78,3 +78,17 @@ input[type="text"], span {
 	</ul>
 	
 </div>
+
+<div class="list">
+
+	<h4> Articles list </h4>
+
+	<ul *ngIf="articles">
+		<li *ngFor="let article of articles"> 
+			{{article.id}} - {{article.title}}
+		</li>
+	</ul>
+
+	<span *ngIf="!articles"> Loading articles...</span>
+	
+</div>

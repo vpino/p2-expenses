@@ -6,7 +6,19 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class RequestService{
 
+	public url:string;
+
+	constructor(private _http:Http){
+		this.url = "https://jsonplaceholder.typicode.com/posts"
+	}
+
 	getTest(){
 		return 'Hi world since the service';
 	}
+
+	getArticles(){
+		return this._http.get(this.url)
+						 .map(response => response.json());
+	}
+
 }

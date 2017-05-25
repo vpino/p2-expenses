@@ -11,6 +11,7 @@ export class CarComponent {
 	
 	public car:Car;
 	public cars:Array<Car>;
+	public articles;
 
 	constructor(private _requestService:RequestService){
 
@@ -24,7 +25,26 @@ export class CarComponent {
 	}
 
 	ngOnInit(){
-		console.log(this._requestService.getTest());
+
+		this._requestService.getArticles().subscribe(
+			
+			success => {
+				this.articles = success;
+
+				if(!this.articles){
+					console.log("Error in the server");
+				}
+			},
+
+			error => {
+				var errorMessage = <any>error;
+
+				console.log(errorMessage);
+
+			}
+
+		);
+
 	}
 
 	onSubmit(){
