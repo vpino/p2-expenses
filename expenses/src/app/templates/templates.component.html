@@ -1,9 +1,11 @@
 <h4> {{ title}} </h4>
 
-<div *ngIf="administrator; else noAdmin">
+<div *ngIf="administrator; then Admin else noAdmin"></div>
+
+<ng-template #Admin>
 	<button (click)="changeAdmin(false)"> Change </button>
 	<strong> You're the administrator the webapp</strong>
-</div>
+</ng-template>
 
 <ng-template #noAdmin>
 	<button (click)="changeAdmin(true)"> Change </button>
