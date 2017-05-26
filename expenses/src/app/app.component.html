@@ -1,40 +1,26 @@
-<h1>
-  {{title}}
-</h1>
-<hr>
+<div id="content" class="col-md-10 col-md-offset-1">
 
-<nav>
-	<a [routerLink]="['/home']" [routerLinkActive]="['active']"> 
-		Home
-	</a> 
-	-
-	<a [routerLink]="['/fruit']" [routerLinkActive]="['active']"> 
-		Fruit
-	</a> 
-	- 
-	<a [routerLink]="['/employee']" [routerLinkActive]="['active']"> 
-		Employee
-	</a> 
-	-
-	<a [routerLink]="['/contact']" [routerLinkActive]="['active']" > 
-		Contact
-	</a>
-	-
-	<a [routerLink]="['/car']" [routerLinkActive]="['active']" > 
-		Car
-	</a>
-	-
-	<a [routerLink]="['/templates']" [routerLinkActive]="['active']" > 
-		Templates
-	</a>
-</nav>
+	<header id="header" class="col-md-12">
+		
+		<h1> {{title }}</h1>
 
-<hr/>
+	</header>
 
-<!-- 
-<fruit></fruit>
-	<hr>
-<employee></employee>
--->
+	<nav id="nav" class="col-md-12">
+		<ul>
+			<li><a href=""> Home </a></li>
+			<li><a href=""> Product </a></li>
+			<li><a href=""> Create Product </a></li>
+		</ul>
+	</nav>
+	
+	<section id="main" class="col-md-12">
+		<!-- Component Current -->
+		<h3> Main Text</h3>
+		
+	</section>
 
-<router-outlet></router-outlet>
+	<footer>
+		<p> Expenses - Angular 4</p>	
+	</footer>
+</div>

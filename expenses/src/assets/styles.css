@@ -1,16 +1,28 @@
-.fundBlue{
-	background: lightblue !important;
+#content{
+	margin-top: 30px;
+	border-radius: 2px;
+	background: white;
+	box-shadow: 0px 2px 5px #ccc;
+	padding: 0px;
+	overflow: hidden;
 }
 
-.fundGreen{
-	background: lightgreen !important;
+#header{
+	background: #E03137;
+	color: white;
+	margin: 0px;
+	height: 90px;
+	line-height: 90px;
 }
 
-.letterBig{
-	font-size: 40px;
-}
-
-.active{
+#header h1{
+	display: block;
+	line-height: 50px;
 	font-weight: bold;
-	background: yellow;
+	font-size: 30px;
 }
+
+
+
+
+
