@@ -1,27 +1,16 @@
-<h2> {{ title }} </h2>
-<br/>
+<div class="col-md-10 col-md-offset-1">
+	
+	<div class="jumbotron">
+		<h3> {{ title }}</h3>
+		
+		<p>
+			Manager your expenses wiht this app created in Angular 4
 
-{{date | date:'dd-MM-yyyy' }}
--
-{{date | date:'fullDate' | uppercase | lowercase }}
--
-{{ 5 | converter: 7 }}
+		</p>
 
-<br/>
+		<a href="#" class="btn btn-lg btn-primary"> Show Products </a>
+		<a href="#" class="btn btn-lg btn-success"> Add Product </a>
 
-<input type="text" [(ngModel)]="garment_save">
-
-<button (click)="saveGarment()"> Add Garment</button>
-
-<p *ngIf="garment_save == 'white'">
-	Garment to save: <strong> {{garment_save}} </strong>
-</p>
-
-<h3> List of garment of clothes </h3>
-
-<ul>
-	<li *ngFor="let garment of list_clothes; let i = index">
-		{{garment}}
-		<button (click)="deleteGarment(i)"> Delete </button>
-	</li>
-</ul>
+	</div>
+	
+</div>

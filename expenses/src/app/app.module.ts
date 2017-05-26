@@ -5,25 +5,13 @@ import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { FruitComponent } from './fruit/fruit.component';
-import { EmployeeComponent } from './employee/employee.component';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { ConverterPipe } from './pipes/converter.pipe';
-import { CarComponent } from './car/car.component';
-import { TemplatesComponent } from './templates/templates.component';
 
 @NgModule({
   
   declarations: [
     AppComponent,
-    FruitComponent,
-    EmployeeComponent,
-    HomeComponent,
-    ContactComponent,
-    ConverterPipe,
-    CarComponent,
-    TemplatesComponent
+    HomeComponent
   ],
 
   imports: [
