@@ -8,15 +8,15 @@
 
 	<nav id="nav" class="col-md-12">
 		<ul>
-			<li><a href=""> Home </a></li>
-			<li><a href=""> Product </a></li>
-			<li><a href=""> Create Product </a></li>
+			<li><a [routerLink]="['/home']" [routerLinkActive]="['active']"> Home </a></li>
+			<li><a [routerLink]="['/products']" [routerLinkActive]="['active']"> Products </a></li>
+			<li><a [routerLink]="['']" [routerLinkActive]="['active']"> Create Product </a></li>
 		</ul>
 	</nav>
 	
 	<section id="main" class="col-md-12">
 		<!-- Component Current -->
-		<home></home>
+		<router-outlet></router-outlet>
 		
 	</section>
 
